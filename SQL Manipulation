@@ -1,0 +1,8 @@
+#CREATE statements allow us to create a new table in the database
+SELECT * FROM celebs;
+CREATE TABLE celebs (
+ 		id INTEGER,
+ 		name TEXT,
+ 		age INTEGER
+);
+
