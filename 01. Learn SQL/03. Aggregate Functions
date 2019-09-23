@@ -1,33 +1,25 @@
-#COUNT() is a function that takes the name of a column as an argument and counts the number of non-empty values in that column
-
+# COUNT() is a function that takes the name of a column as an argument and counts the number of non-empty values in that column
 SELECT COUNT(*) 
 FROM fake_apps
 WHERE price=0;
 
-#SUM() is a function that takes the name of a column as an argument and returns the sum of all the values in that column
-
+# SUM() is a function that takes the name of a column as an argument and returns the sum of all the values in that column
 SELECT SUM(downloads)
 FROM fake_apps;
 
-#The MAX() and MIN() functions return the highest and lowest values in a column
-
+# The MAX() and MIN() functions return the highest and lowest values in a column
 SELECT MIN(downloads)
 FROM fake_apps;
 
-#The AVG() function works by taking a column name as an argument and returns the average value for that column
-
+# The AVG() function works by taking a column name as an argument and returns the average value for that column
 SELECT AVG(downloads)
 FROM fake_apps;
 
-#ROUND() function takes two arguments inside the parenthesis
-
+# ROUND() function takes two arguments inside the parenthesis
 SELECT name, ROUND(price,0)
 FROM fake_apps;
 
-#GROUP BY is a clause in SQL that is used with aggregate functions
-It is used in collaboration with the SELECT statement to arrange identical data into groups 
-The GROUP BY statement comes after any WHERE statements, but before ORDER BY or LIMIT
-
+# GROUP BY is a clause in SQL that is used with aggregate functions. It is used in collaboration with the SELECT statement to arrange identical data into groups. The GROUP BY statement comes after any WHERE statements, but before ORDER BY or LIMIT
 SELECT price, COUNT(*)
 FROM fake_apps
 WHERE downloads > 20000
@@ -38,8 +30,7 @@ SELECT category,
 FROM fake_apps
 GROUP BY category;
 
-#GROUP BY a calculation done on a column
-
+# GROUP BY a calculation done on a column
 SELECT category, 
    price,
    AVG(downloads)
@@ -52,9 +43,7 @@ SELECT category,
 FROM fake_apps
 GROUP BY 1, 2;
 
-#We don’t want to filter the rows; we want to filter groups. This is where HAVING comes in
-HAVING statement always comes after GROUP BY, but before ORDER BY and LIMIT.
-
+# We don’t want to filter the rows; we want to filter groups. This is where HAVING comes in. HAVING statement always comes after GROUP BY, but before ORDER BY and LIMIT.
 SELECT price,
 	ROUND(AVG(downloads)),
   COUNT(*)
