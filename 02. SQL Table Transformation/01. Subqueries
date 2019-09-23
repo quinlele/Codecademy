@@ -1,5 +1,4 @@
-#Non-Correlated Subqueries is a subquery that can be run independently of the outer query and as we saw, can be used to complete a multi-step transformation
-
+# Non-Correlated Subqueries is a subquery that can be run independently of the outer query and as we saw, can be used to complete a multi-step transformation
 SELECT *
 FROM flights
 WHERE origin in (
@@ -21,4 +20,4 @@ SELECT a.dep_month,
  GROUP BY 1,2
  ORDER BY 1,2;
  
- #Correlated Subqueries 
+ # Correlated Subqueries 
