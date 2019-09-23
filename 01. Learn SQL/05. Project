@@ -1,5 +1,4 @@
-#Create a Table
-
+# Create a Table
 CREATE TABLE friends (
 	id INTEGER,
   name TEXT,
